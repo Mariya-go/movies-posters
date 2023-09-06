@@ -5,7 +5,7 @@ import editMovieComponent from '../components/editMovieComponent.js';
 import editMovie from '../../apis/editMovie.js';
 
 const addMovieHandler = async (e) => {
-    e.preventDefault();
+    e.preventDefault;
 
     const newMovieData = {
         title: dom.movieTitle.value,
@@ -29,7 +29,7 @@ const addMovieHandler = async (e) => {
         const movieEdit = await editMovie(id, newMovieData);
         // editButtonHandler(id, newMovieData);
 
-        newMovieDom.classList.remove('selected');
+        container.classList.remove('selected');
         dom.movieTitle.placeholder = 'Edit movie title';
         dom.movieSrc.placeholder = 'Edit movie src';
     }
