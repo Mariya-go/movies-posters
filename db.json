@@ -1,0 +1,34 @@
+{
+  "movies": [
+    {
+      "title": "Raised By wolves",
+      "src": "https://m.media-amazon.com/images/M/MV5BNTRlMTg4NWYtZmRiNS00YWE0LWFkZTMtNjk5Yzc3NGE0ZTE0XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_.jpg",
+      "year": "2014",
+      "id": 1
+    },
+    {
+      "title": "joker",
+      "src": "./assets/joker.jpg",
+      "year": "2010",
+      "id": 2
+    },
+    {
+      "title": "passenger",
+      "src": "./assets/passenger.jpg",
+      "year": "2017",
+      "id": 3
+    },
+    {
+      "title": "shooter",
+      "src": "./assets/shooter.jpeg",
+      "year": "2020",
+      "id": 4
+    },
+    {
+      "title": "Agnee path",
+      "src": "https://upload.wikimedia.org/wikipedia/en/0/08/Agneepath_poster.jpg",
+      "year": "2010",
+      "id": 5
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./assets/icon.png" type="icon" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <title>Movies List</title>
+    </head>
+    <body>
+        <div class="container">
+            <input id="title" type="text" placeholder="Add movie title" />
+            <input id="source" type="text" placeholder="Add movie src" />
+            <input id="year" type="text" placeholder="Add year" />
+            <button type="button" id="btn">Add movie</button>
+        </div>
+        <div class="error"></div>
+        <div class="movies"></div>
+        <script type="module" src="./src/init.js"></script>
+    </body>
+</html>
