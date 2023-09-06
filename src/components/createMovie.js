@@ -1,55 +1,52 @@
+import deleteMovieHandler from '../handlers/deleteButtonHandler.js';
+
+import addMovieHandler from '../handlers/addButtonHandler.js';
 import dom from '../dom.js';
-import deleteMovieHandler from '../handlers/deleteMovieHandler.js';
 
-const createMovie = (movieData) => {
-    const id = movieData.id;
-    // create container
-    const container = document.createElement('div');
-    container.classList.add('image-box');
-    container.id = movieData.id;
+const movieCreator = (movieData) => {
+    const movieImg = document.createElement('div');
+    movieImg.classList.add('image-box');
+    movieImg.id = movieData.id;
 
-    // create img
-    const img = document.createElement('img');
-    img.src = movieData.src;
-    img.alt = movieData.title;
+    const image = document.createElement('img');
+    image.src = movieData.src;
+    image.alt = movieData.title;
+    image.classList.add('image');
 
-    // create title
-    const title = document.createElement('h6');
+    let title = document.createElement('h6');
     title.innerText = movieData.title;
+    title.classList.add('title');
 
-    // create year
-    const year = document.createElement('h5');
-    year.innerText = movieData.year;
+    const editButton = document.createElement('button');
+    editButton.classList.add('btn', 'btn-info');
+    editButton.innerText = 'Edit';
 
-    // delete button
+    const id = Number(movieImg.id);
+
+    // add event to edit btn
+
+    editButton.addEventListener('click', () => {
+        // debugger;
+        dom.button.innerHTML = 'Edit movie';
+        movieImg.classList.add('selected');
+        dom.movieTitle.value = movieData.title;
+        dom.movieSrc.value = movieData.src;
+
+        addMovieHandler();
+    });
+
     const deleteButton = document.createElement('button');
+    deleteButton.classList.add('btn', 'btn-danger');
     deleteButton.innerText = 'Delete';
-    deleteButton.className = 'deleteBtn';
+
+    // add event to delete btn
 
     deleteButton.addEventListener('click', () => {
         deleteMovieHandler(id);
     });
 
-    // edit button
-    const editButton = document.createElement('button');
-    editButton.innerText = 'Edit';
-    editButton.className = 'editBtn';
-    editButton.addEventListener('click', () => {
-        dom.btn.innerText = 'Edit Movie';
-        container.classList.add('selected');
-        dom.titleInput.value = movieData.title;
-        dom.sourceInput.value = movieData.src;
-        dom.year.value = movieData.year;
-    });
-
-    const btnContainer = document.createElement('div');
-    btnContainer.classList.add('btn-container');
-
-    btnContainer.append(deleteButton, editButton);
-
-    container.append(img, title, year, btnContainer);
-
-    return container;
+    movieImg.append(image, title, editButton, deleteButton);
+    return movieImg;
 };
 
-export default createMovie;
+export default movieCreator;

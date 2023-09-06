@@ -7,7 +7,7 @@ const deleteMovie = async (id) => {
         });
         if (!res.ok) {
             throw new Error(
-                `Failed to fetch movies with status : ${res.status}`
+                `Failed to fetch movies with status: ${res.status}`
             );
         }
         return await res.json();

@@ -1,18 +1,24 @@
 import dom from '../dom.js';
+import movieCreator from '../components/createMovie.js';
 import getMovies from '../../apis/getMovies.js';
-import createMovie from '../components/createMovie.js';
-import sortMovies from '../utils/sortMovies.js';
-import createLoader from '../components/createLoader.js'
+import sorter from '../utils/sorter.js';
+import loadComponent from '../components/loadComponent.js';
 
 const loadHandler = async () => {
-    const loaderDom = createLoader();
-    dom.movies.append(loaderDom);
+    // loader
+
+    const loadDom = loadComponent();
+    dom.movies.append(loadDom);
+
+    // get movies
     const movies = await getMovies();
+
+    // create movies list
     if (movies) {
-        loaderDom.remove();
-        const sortedMovies = sortMovies(movies);
+        loadDom.remove();
+        const sortedMovies = sorter(movies);
         sortedMovies.forEach((movieData) => {
-            const movieDom = createMovie(movieData);
+            const movieDom = movieCreator(movieData);
             dom.movies.append(movieDom);
         });
     }

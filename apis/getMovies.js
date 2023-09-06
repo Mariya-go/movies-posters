@@ -5,7 +5,7 @@ const getMovies = async () => {
         const res = await fetch(data.baseUrl);
         if (!res.ok) {
             throw new Error(
-                `Failed to fetch movies with status : ${res.status}`
+                `Failed to fetch movies with status: ${res.status}`
             );
         }
         return await res.json();

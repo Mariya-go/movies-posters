@@ -1,17 +1,17 @@
 import data from '../src/data.js';
 
-const updateMovie = async (id, newMovie) => {
+const editMovie = async (id, newMovieData) => {
     try {
         const res = await fetch(`${data.baseUrl}/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-type': 'application/json'
             },
-            body: JSON.stringify(newMovie)
+            body: JSON.stringify(newMovieData)
         });
         if (!res.ok) {
             throw new Error(
-                `Failed to fetch movies with status : ${res.status}`
+                `Failed to fetch movies with status: ${res.status}`
             );
         }
         return await res.json();
@@ -21,4 +21,4 @@ const updateMovie = async (id, newMovie) => {
     }
 };
 
-export default updateMovie;
+export default editMovie;

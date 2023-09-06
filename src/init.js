@@ -1,5 +1,5 @@
 import loadEvent from './events/loadEvent.js';
-import addMovieEvent from './events/addMovieEvent.js';
+import addButtonEvent from './events/addButtonEvent.js';
 
 loadEvent();
-addMovieEvent();
+addButtonEvent();
