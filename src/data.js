@@ -3,7 +3,7 @@ const data = {
     baseUrl:
         'https://my-json-server.typicode.com/Mariya-go/movies-posters/movies',
 
-    id: 50
+    id: 60
 };
 export default data;
 //  https://my-json-server.typicode.com/samirm00/movies-list/movies
