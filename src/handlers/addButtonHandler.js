@@ -16,7 +16,7 @@ const addMovieHandler = async (e) => {
         const newMovieDataAdd = {
             title: dom.movieTitle.value,
             src: dom.movieSrc.value,
-            id: data.id
+            id: data.id++
         };
 
         const newMovieDom = movieCreator(newMovieDataAdd);
@@ -24,12 +24,6 @@ const addMovieHandler = async (e) => {
         dom.movies.prepend(newMovieDom);
 
         await addMovie(newMovieDataAdd);
-
-        dom.movieTitle.value = '';
-        dom.movieSrc.value = '';
-        debugger;
-
-        data.id++;
     } else {
         const newMovieDataEdit = {
             title: dom.movieTitle.value,
@@ -42,10 +36,12 @@ const addMovieHandler = async (e) => {
 
         // remove class and inputs
         container.classList.remove('selected');
-        dom.movieTitle.value = '';
-        dom.movieSrc.value = '';
+
         dom.button.innerHTML = 'Add movie';
     }
+
+    dom.movieTitle.value = '';
+    dom.movieSrc.value = '';
 };
 
 export default addMovieHandler;
