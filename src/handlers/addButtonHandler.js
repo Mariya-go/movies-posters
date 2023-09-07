@@ -22,6 +22,9 @@ const addMovieHandler = async (e) => {
         dom.movies.prepend(newMovieDom);
 
         await addMovie(newMovieData);
+
+        dom.movieTitle.value = '';
+        dom.movieSrc.value = '';
     } else {
         const container = document.querySelector('.selected');
         const id = Number(container.id);
