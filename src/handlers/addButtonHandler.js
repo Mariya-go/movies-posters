@@ -17,21 +17,22 @@ const addMovieHandler = async (e) => {
     }
 
     if (dom.button.innerText === 'Add movie') {
-        const newMovie = await addMovie(newMovieData);
-
         const newMovieDom = movieCreator(newMovieData);
 
         dom.movies.prepend(newMovieDom);
+
+        await addMovie(newMovieData);
     } else {
         const container = document.querySelector('.selected');
         const id = Number(container.id);
         const newMovieDom = editMovieComponent(newMovieData);
-        const movieEdit = await editMovie(id, newMovieData);
-        // editButtonHandler(id, newMovieData);
+        await editMovie(id, newMovieData);
 
+        // remove class and inputs
         container.classList.remove('selected');
-        dom.movieTitle.placeholder = 'Edit movie title';
-        dom.movieSrc.placeholder = 'Edit movie src';
+        dom.movieTitle.value = '';
+        dom.movieSrc.value = '';
+        dom.button.innerHTML = 'Add movie';
     }
 };
 
