@@ -1,5 +1,5 @@
 import deleteMovieHandler from '../handlers/deleteButtonHandler.js';
-
+import data from '../data.js';
 import addMovieHandler from '../handlers/addButtonHandler.js';
 import dom from '../dom.js';
 
@@ -31,8 +31,6 @@ const movieCreator = (movieData) => {
         movieImg.classList.add('selected');
         dom.movieTitle.value = movieData.title;
         dom.movieSrc.value = movieData.src;
-
-        addMovieHandler();
     });
 
     const deleteButton = document.createElement('button');

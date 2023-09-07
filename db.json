@@ -3,42 +3,17 @@
     {
       "title": "Brave Heart",
       "src": "./assets/braveheart.jpeg",
-      "id": 7
+      "id": 2
     },
     {
-      "title": "Cat Woman",
+      "title": "Cat Women",
       "src": "./assets/catwomen.webp",
-      "id": 8
+      "id": 3
     },
     {
-      "title": "Holiday",
-      "src": "./assets/holiday.jpg",
-      "id": 9
-    },
-    {
-      "title": "Passenger",
-      "src": "./assets/passenger.jpg",
-      "id": 10
-    },
-    {
-      "title": "Raised by wolves 2",
-      "src": "./assets/raised.jpg",
-      "id": 11
-    },
-    {
-      "title": "Shooter",
-      "src": "./assets/shooter.jpeg",
-      "id": 12
-    },
-    {
-      "title": "Space",
-      "src": "./assets/space.jpg",
-      "id": 13
-    },
-    {
-      "title": "Joker",
-      "src": "./assets/joker.jpg",
-      "id": 16
+      "title": "eawygsdhfg123",
+      "src": "sdgf",
+      "id": 51
     }
   ]
 }

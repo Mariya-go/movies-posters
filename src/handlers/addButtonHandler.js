@@ -1,4 +1,5 @@
 import dom from '../dom.js';
+import data from '../data.js';
 import addMovie from '../../apis/addMovie.js';
 import movieCreator from '../components/createMovie.js';
 import editMovieComponent from '../components/editMovieComponent.js';
@@ -9,7 +10,8 @@ const addMovieHandler = async (e) => {
 
     const newMovieData = {
         title: dom.movieTitle.value,
-        src: dom.movieSrc.value
+        src: dom.movieSrc.value,
+        id: data.id++
     };
 
     if (newMovieData.title === '' || newMovieData.src === '') {
